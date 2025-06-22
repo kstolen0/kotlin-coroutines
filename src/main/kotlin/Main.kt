@@ -6,7 +6,9 @@ import kotlinx.coroutines.runBlocking
 fun main() {
     // runBlocking is a coroutine builder.
     // It creates a new coroutine context which bridges
-    // the gap between synchronous and asynchronous code
+    // the gap between synchronous and asynchronous code.
+    // runBlocking blocks the current thread until all
+    // jobs in the coroutine scope have completed
     runBlocking {
         susPrint("hello!")
     }
