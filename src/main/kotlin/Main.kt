@@ -1,6 +1,7 @@
 package main
 
 import kotlinx.coroutines.async
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.yield
@@ -15,9 +16,10 @@ fun main() {
             " world"
         }
         val taskTwo = async {
-            // uncomment the below line to also cancel the
+            // uncommenting the two lines below will also cancel the
             // job awaiting the result from taskTwo
             // cancel()
+            // yield()
             "hello"
         }
 
