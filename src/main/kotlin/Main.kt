@@ -12,7 +12,7 @@ fun main() {
         // A Deferred object will eventually return a result, or it will fail
         val taskOne = async {
             yield()
-            "world"
+            " world"
         }
         val taskTwo = async {
             // uncomment the below line to also cancel the
@@ -25,10 +25,10 @@ fun main() {
             // await suspends the current coroutine
             // until the result is available.
             // if the job was cancelled then this job will also be cancelled
-            println(taskOne.await())
+            print(taskOne.await())
         }
         launch {
-            println(taskTwo.await())
+            print(taskTwo.await())
         }
     }
 }
